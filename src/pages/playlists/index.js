@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+import { useRouter } from 'next/router'
 import { array } from 'prop-types'
 import fetch from 'isomorphic-unfetch'
 
@@ -8,7 +10,11 @@ import { PlaylistProvider } from '../../context'
 import { Wrap } from './styles'
 
 const Playlists = ({ filters }) => {
-  //TODO: remove tokens from url.
+  const router = useRouter()
+
+  useEffect(() => {
+    router.push('', {}, { shallow: true })
+  }, [])
 
   return (
     <PlaylistProvider>
