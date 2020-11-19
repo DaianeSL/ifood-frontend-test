@@ -1,20 +1,23 @@
 import { string, array, func } from 'prop-types'
 
+import { SelectInput, Opt } from './styles'
+
 const Select = ({ id, values, label, onChange }) => {
   return (
     // eslint-disable-next-line jsx-a11y/no-onchange
-    <select name="" id="" onChange={(e) => onChange(e.target.value, id)}>
-      <option value="">{label}</option>
+    <SelectInput
+      name={id}
+      id={id}
+      onChange={(e) => onChange(e.target.value, id)}
+    >
+      <Opt value="">{label}</Opt>
       {values &&
-        values.map((
-          option,
-          index //TODO: option color to prevent windows bug on selects.
-        ) => (
-          <option key={index} value={option.value}>
+        values.map((option) => (
+          <Opt key={option.value} value={option.value}>
             {option.name}
-          </option>
+          </Opt>
         ))}
-    </select>
+    </SelectInput>
   )
 }
 
