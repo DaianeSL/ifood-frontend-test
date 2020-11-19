@@ -26,7 +26,7 @@ export const AdvancedFilter = styled.div`
     width: 100%;
     background: transparent;
     color: ${({ theme }) => theme.colors.white};
-    font-size: ${({ theme }) => theme.fonts.input};
+    font-size: ${({ theme }) => theme.fonts.sizes.input};
     font-family: ${({ theme }) => theme.fonts.family};
     padding: 10px;
     outline: none;
@@ -35,14 +35,15 @@ export const AdvancedFilter = styled.div`
 
     &::placeholder {
       color: ${({ theme }) => theme.colors.white};
-      font-size: ${({ theme }) => theme.fonts.input};
+      font-size: ${({ theme }) => theme.fonts.sizes.input};
       font-family: ${({ theme }) => theme.fonts.family};
+      opacity: 1;
     }
   }
 `
 
 export const ErrorText = styled.h3`
-  font-size: ${({ theme }) => theme.fonts.title};
+  font-size: ${({ theme }) => theme.fonts.sizes.title};
   color: ${({ theme }) => theme.colors.white};
 `
 

@@ -7,7 +7,7 @@ export const Input = styled.input`
   border: none;
   border-bottom: 2px solid ${({ theme }) => theme.colors.purple};
   color: ${({ theme }) => theme.colors.white};
-  font-size: ${({ theme }) => theme.fonts.inputSearch};
+  font-size: ${({ theme }) => theme.fonts.sizes.inputSearch};
   font-family: ${({ theme }) => theme.fonts.family};
   outline: none;
   padding: 20px 10px;
@@ -17,6 +17,7 @@ export const Input = styled.input`
     font-family: ${({ theme }) => theme.fonts.family};
     font-weight: bold;
     color: ${({ theme }) => theme.colors.white};
-    font-size: ${({ theme }) => theme.fonts.inputSearch};
+    font-size: ${({ theme }) => theme.fonts.sizes.inputSearch};
+    opacity: 1;
   }
 `

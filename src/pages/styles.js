@@ -35,7 +35,7 @@ export const Link = styled.a`
   color: white;
   font-weight: bold;
   position: absolute;
-  font-size: ${({ theme }) => theme.fonts.title};
+  font-size: ${({ theme }) => theme.fonts.sizes.title};
   top: 0;
   left: 0;
   z-index: 5;
@@ -48,7 +48,7 @@ export const Link = styled.a`
 
 export const Title = styled.h1`
   color: ${({ theme }) => theme.colors.orange};
-  font-size: ${({ theme }) => theme.fonts.title};
+  font-size: ${({ theme }) => theme.fonts.sizes.title};
   margin: 0;
   text-transform: uppercase;
   overflow: hidden;
@@ -71,7 +71,7 @@ export const TextContainer = styled.div`
 
 export const Text = styled.p`
   color: ${({ theme }) => theme.colors.orange};
-  font-size: ${({ theme }) => theme.fonts.paragraph};
+  font-size: ${({ theme }) => theme.fonts.sizes.paragraph};
   font-weight: 200;
 `
 
