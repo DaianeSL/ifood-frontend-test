@@ -64,3 +64,8 @@ export const PlaylistItem = styled.div`
 export const PlaylistContainer = styled.div`
   padding: 10px;
 `
+
+export const ErrorMessage = styled.h3`
+  font-size: ${({ theme }) => theme.fonts.sizes.title};
+  color: ${({ theme }) => theme.colors.white};
+`

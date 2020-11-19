@@ -12,6 +12,10 @@ export const INITIAL_STATE = {
   playlists: [],
   filter: {},
   textFilter: '',
+  status: {
+    error: false,
+    isLoading: false,
+  },
 }
 
 export const PlaylistsContext = createContext({})
@@ -53,13 +57,21 @@ const PlaylistsProvider = ({ children }) => {
   }
 
   const fetchPlaylists = useCallback(async (params = {}, searchFilter) => {
-    const { data } = await getFeaturedPlaylists(params) //TODO: add extra validation here.
+    changeState({ error: false, isLoading: true }, 'status')
 
-    if (data)
-      // eslint-disable-next-line no-extra-boolean-cast
-      !!searchFilter
-        ? filterByName(data.playlists.items, searchFilter)
-        : changeState(data.playlists.items, 'playlists')
+    try {
+      const { data } = await getFeaturedPlaylists(params)
+
+      if (data)
+        // eslint-disable-next-line no-extra-boolean-cast
+        !!searchFilter
+          ? filterByName(data.playlists.items, searchFilter)
+          : changeState(data.playlists.items, 'playlists')
+
+      changeState({ error: false, isLoading: false }, 'status')
+    } catch {
+      changeState({ error: true, isLoading: false }, 'status')
+    }
   }, [])
 
   useEffect(() => {

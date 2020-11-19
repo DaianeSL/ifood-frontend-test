@@ -15,7 +15,8 @@ const AuthProvider = ({ children }) => {
 export const useAuthContext = () => {
   const context = useContext(AuthContext)
 
-  if (!context) throw new Error('') //TODO: change pharse.
+  if (!context)
+    throw new Error('Ops! Check if useAuthContext is within the AuthProvider')
 
   return {
     ...context,
