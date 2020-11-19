@@ -28,7 +28,7 @@ const Playlists = ({ filters }) => {
 
 export async function getServerSideProps() {
   try {
-    const data = await fetch('http://www.mocky.iot/v2/5a25fade2e0000213aa90776')
+    const data = await fetch('http://www.mocky.io/v2/5a25fade2e0000213aa90776')
     const { filters } = await data.json()
     return {
       props: { filters },
