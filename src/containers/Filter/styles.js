@@ -41,6 +41,11 @@ export const AdvancedFilter = styled.div`
   }
 `
 
+export const ErrorText = styled.h3`
+  font-size: ${({ theme }) => theme.fonts.title};
+  color: ${({ theme }) => theme.colors.white};
+`
+
 export const FieldContainer = styled.div`
   width: 50%;
 
