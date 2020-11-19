@@ -19,11 +19,6 @@ function MyApp({ Component, pageProps }) {
           <Head>
             <title>{APP_NAME}</title>
             <meta name="description" content={APP_DESC} />
-            <link rel="preconnect" href="https://fonts.gstatic.com" />
-            <link
-              href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;800&display=swap"
-              rel="stylesheet"
-            />
           </Head>
           <Component {...pageProps} />
         </>
