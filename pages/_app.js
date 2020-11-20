@@ -2,11 +2,11 @@ import Head from 'next/head'
 import { element, func, object, oneOfType } from 'prop-types'
 import { ThemeProvider } from 'styled-components'
 
-import { AuthProvider } from '../context'
-import { APP_NAME, APP_DESC } from '../constants/project'
+import { AuthProvider } from '../src/context'
+import { APP_NAME, APP_DESC } from '../src/constants/project'
 
-import GlobalStyle from '../assets/styles/globalStyles'
-import theme from '../assets/styles/theme'
+import GlobalStyle from '../src/assets/styles/globalStyles'
+import theme from '../src/assets/styles/theme'
 
 import 'react-datepicker/dist/react-datepicker.css'
 

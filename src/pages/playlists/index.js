@@ -1,7 +1,6 @@
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { array } from 'prop-types'
-import fetch from 'isomorphic-unfetch'
 
 import Filter from '../../containers/Filter'
 import PlaylistsList from '../../containers/PlaylistsList'
@@ -24,20 +23,6 @@ const Playlists = ({ filters }) => {
       </Wrap>
     </PlaylistProvider>
   )
-}
-
-export async function getServerSideProps() {
-  try {
-    const data = await fetch('http://www.mocky.io/v2/5a25fade2e0000213aa90776')
-    const { filters } = await data.json()
-    return {
-      props: { filters },
-    }
-  } catch {
-    return {
-      props: { filters: [] },
-    }
-  }
 }
 
 export default Playlists
